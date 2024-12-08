@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>วิเคราะห์กระแสเงินสดผ่านธนาคาร</title>
+    <style>
+        body {
+            font-family: 'Sarabun', sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: right;
+        }
+        th {
+            background-color: #f8f9fa;
+        }
+        .bank-header {
+            background-color: #e9ecef;
+            font-weight: bold;
+        }
+        .total-row {
+            font-weight: bold;
+            background-color: #f8f9fa;
+        }
+        .summary-box {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 20px 0;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .chart-container {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .red {
+            color: #dc3545;
+        }
+        .green {
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">รายงานการวิเคราะห์กระแสเงินสดผ่านธนาคาร</h1>
+        
+        <h2>1. ธนาคารกรุงไทย</h2>
+        <table>
+            <tr>
+                <th>เดือน</th>
+                <th>เงินเข้า (บาท)</th>
+                <th>เงินออก (บาท)</th>
+                <th>ยอดคงเหลือ (บาท)</th>
+                <th>ผลต่าง +/- (บาท)</th>
+            </tr>
+            <tr>
+                <td>มิ.ย. 2567</td>
+                <td>1,300,387.85</td>
+                <td>1,299,917.30</td>
+                <td>675.10</td>
+                <td class="green">+470.55</td>
+            </tr>
+            <tr>
+                <td>ก.ค. 2567</td>
+                <td>1,183,523.04</td>
+                <td>1,077,364.76</td>
+                <td>106,833.38</td>
+                <td class="green">+106,158.28</td>
+            </tr>
+            <tr>
+                <td>ส.ค. 2567</td>
+                <td>759,938.04</td>
+                <td>759,869.88</td>
+                <td>106,901.54</td>
+                <td class="green">+68.16</td>
+            </tr>
+            <tr>
+                <td>ก.ย. 2567</td>
+                <td>983,570.00</td>
+                <td>1,011,524.50</td>
+                <td>78,947.04</td>
+                <td class="red">-27,954.50</td>
+            </tr>
+            <tr>
+                <td>ต.ค. 2567</td>
+                <td>426,516.00</td>
+                <td>699,405.30</td>
+                <td>23,509.68</td>
+                <td class="red">-272,889.30</td>
+            </tr>
+            <tr>
+                <td>พ.ย. 2567</td>
+                <td>425,561.04</td>
+                <td>912,679.17</td>
+                <td>93,785.84</td>
+                <td class="red">-487,118.13</td>
+            </tr>
+            <tr class="total-row">
+                <td>รวม</td>
+                <td>5,079,495.97</td>
+                <td>5,760,760.91</td>
+                <td>93,785.84</td>
+                <td class="red">-681,264.94</td>
+            </tr>
+        </table>
+
+        <h2>2. ธนาคารกสิกรไทย</h2>
+        <table>
+            <tr>
+                <th>เดือน</th>
+                <th>เงินเข้า (บาท)</th>
+                <th>เงินออก (บาท)</th>
+                <th>ยอดคงเหลือ (บาท)</th>
+                <th>ผลต่าง +/- (บาท)</th>
+            </tr>
+            <tr>
+                <td>มิ.ย. 2567</td>
+                <td>5,653,808.00</td>
+                <td>5,642,251.61</td>
+                <td>560,960.69</td>
+                <td class="green">+11,556.39</td>
+            </tr>
+            <tr>
+                <td>ก.ค. 2567</td>
+                <td>11,675,934.94</td>
+                <td>11,688,437.63</td>
+                <td>548,458.00</td>
+                <td class="red">-12,502.69</td>
+            </tr>
+            <tr>
+                <td>ส.ค. 2567</td>
+                <td>15,987,654.61</td>
+                <td>15,964,112.40</td>
+                <td>572,000.21</td>
+                <td class="green">+23,542.21</td>
+            </tr>
+            <tr>
+                <td>ก.ย. 2567</td>
+                <td>18,456,789.22</td>
+                <td>18,478,789.31</td>
+                <td>550,000.12</td>
+                <td class="red">-22,000.09</td>
+            </tr>
+            <tr>
+                <td>ต.ค. 2567</td>
+                <td>17,654,321.30</td>
+                <td>17,704,321.42</td>
+                <td>500,000.00</td>
+                <td class="red">-50,000.12</td>
+            </tr>
+            <tr>
+                <td>พ.ย. 2567</td>
+                <td>17,562,498.00</td>
+                <td>17,509,992.61</td>
+                <td>52,505.39</td>
+                <td class="green">+52,505.39</td>
+            </tr>
+            <tr class="total-row">
+                <td>รวม</td>
+                <td>86,991,006.07</td>
+                <td>87,487,904.98</td>
+                <td>52,505.39</td>
+                <td class="red">-496,898.91</td>
+            </tr>
+        </table>
+
+        <div class="summary-box">
+            <h2>สรุปรวมทั้งสองธนาคาร</h2>
+            <p>รวมเงินเข้าทั้งหมด: 92,070,502.04 บาท</p>
+            <p>รวมเงินออกทั้งหมด: 93,248,665.89 บาท</p>
+            <p>ยอดคงเหลือรวม: 146,291.23 บาท</p>
+            <p>ผลต่างสุทธิ: -1,178,163.85 บาท</p>
+        </div>
+
+        <div class="summary-box">
+            <h2>ข้อสังเกตที่สำคัญ:</h2>
+            <ol>
+                <li>ธนาคารกสิกรไทยมีปริมาณธุรกรรมสูงกว่าธนาคารกรุงไทยประมาณ 17 เท่า</li>
+                <li>ทั้งสองบัญชีมีแนวโน้มยอดคงเหลือลดลงในช่วงเดือนพฤศจิกายน 2567</li>
+                <li>มีการเคลื่อนไหวเงินสูงมากเมื่อเทียบกับยอดคงเหลือ</li>
+                <li>พบว่ามีผลต่างสุทธิติดลบในหลายเดือน ซึ่งอาจต้องตรวจสอบการบริหารกระแสเงินสด</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
